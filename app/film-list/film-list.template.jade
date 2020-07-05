@@ -1,0 +1,25 @@
+
+div(ng-include="'title-bar/title-bar.template.html'")
+
+#films-list
+  div.container
+    div.row
+      div.col-md-3.col-sm-6.col-sm-12(ng-repeat='film in films')
+
+        #film-card.panel.panel-default
+
+          div.panel-heading.panel-size {{film.Title}} - {{film.Year}}
+
+          div.panel-body.no-pad.image-normalize
+            a(ng-click='detailFilmService.setFilm(film)' href='#/details')
+              img.img-responsive.center-block.image-normalize(ng-src='{{film.Poster}}')
+
+          div.panel-footer.text-right.panel-size
+            span(ng-switch='favouriteService.isFavourite(film)')
+              span(ng-switch-when='true')
+                i.glyphicon.glyphicon-star.icon-size.icon-yellow(ng-click='favouriteService.delFavourite(film)')
+              span(ng-switch-default='ng-switch-default')
+                i.glyphicon.glyphicon-star.icon-size(ng-click='favouriteService.addFavourite(film)')
+
+    .row(ng-if='films.length <= 0 || !films')
+      span.col-md-12.text-center.empty-list-text {{emptyInfo}}

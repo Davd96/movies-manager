@@ -1,0 +1,30 @@
+
+div(ng-include="'title-bar/title-bar.template.html'")
+
+div.container
+div.row
+    div.col-md-4
+        img.img-thumbnail.margin(ng-src="{{film.Poster}}")
+    div.col-md-4
+
+        table.table.margin
+            tbody
+                tr
+                    th Title
+                        td {{film.Title}}
+           
+                tr
+                    th Year
+                        td {{film.Year}}
+             
+               
+                tr
+                    th Type
+                        td {{film.Type}}
+
+    div.col-md-4.text-center
+        div.margin(ng-switch="favouriteService.isFavourite(film)")
+            span(ng-switch-when="true")
+                i.glyphicon.glyphicon-star.icon-size-big.icon-yellow(ng-click="favouriteService.delFavourite(film)")
+            span(ng-switch-default)
+                i.glyphicon.glyphicon-star.icon-size-big(ng-click="favouriteService.addFavourite(film)")

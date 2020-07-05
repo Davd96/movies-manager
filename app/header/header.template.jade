@@ -1,0 +1,28 @@
+nav.navbar.navbar-default(ng-controller='headerCtrl' ng-hide='isLogin()')
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href='#/favourite') Movie Manager
+
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+
+      form.navbar-form.navbar-left(ng-submit='onSubmit()')
+        .form-group
+          input.form-control( type='text' placeholder='Search' ng-model='searchInput' ng-change='update(searchInput)' autocomplete)
+          button.btn.btn-default(type='submit' href='#/search/{{searchInput}}') Submit
+          ul.list-group.suggestion-dropdown(ng-hide='!suggestions || !searchInput')
+            li.list-group-item(ng-repeat='suggestion in suggestions')
+              a(ng-click='detailFilmService.setFilm(suggestion); reload();' href='#/details') {{suggestion.Title}}
+
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') {{name}} 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#/favourite') favourite
+
+            li.divider(role='separator')
+
+            li
+              a(ng-click="loginService.logout()") Log out
+

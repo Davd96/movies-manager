@@ -1,0 +1,16 @@
+.container(style='margin-top:30px')
+  .col-md-offset-4.col-md-4
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title
+          strong Sign In 
+      .panel-body
+        form(role='form', ng-submit="submit()")
+          .form-group
+            label(for='inputEmail1') Email
+            input#exampleInputEmail1.form-control(type='email', placeholder='Enter email', ng-model="body.email", required)
+          .form-group
+            label(for='inputPassword')
+              | Password 
+            input#exampleInputPassword1.form-control(type='password', placeholder='Password', ng-model="body.password", required)
+          button.btn.btn-sm.btn-default(type='submit' ) Sign in

@@ -1,0 +1,50 @@
+
+html(ng-app='moviesManager' lang='en')
+  head
+    meta(charset='utf-8')
+    title Movie Manager
+
+    link(rel='stylesheet' href='assets/bower/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet' href='assets/css/app.css')
+
+    script(src='assets/bower/jquery/js/jquery.js' type='text/javascript')
+    script(src='assets/bower/angular/js/angular.js' type='text/javascript')
+    script(src='assets/bower/angular-route/js/angular-route.js' type='text/javascript')
+    script(src='assets/bower/bootstrap/js/bootstrap.min.js' type='text/javascript')
+    script(src='assets/bower/rxjs/js/rx.all.js' type='text/javascript')
+    script(src='assets/bower/rx-angular/js/rx.angular.js' type='text/javascript')
+
+    script(src='assets/js/app.module.js' type='text/javascript')
+    script(src='assets/js/app.router.js' type='text/javascript')
+
+    script(src='assets/js/login/login.module.js' type='text/javascript')
+    script(src='assets/js/login/login.controller.js' type='text/javascript')
+
+    script(src='assets/js/header/header.module.js' type='text/javascript')
+    script(src='assets/js/header/header.controller.js' type='text/javascript')
+
+    script(src='assets/js/film-list/film-list.module.js' type='text/javascript')
+    script(src='assets/js/film-list/favourite.film-list.controller.js' type='text/javascript')
+    script(src='assets/js/film-list/search.film-list.controller.js' type='text/javascript')
+
+    script(src='assets/js/film-details/film-details.module.js' type='text/javascript')
+    script(src='assets/js/film-details/film-details.controller.js' type='text/javascript')
+
+    script(src='assets/js/core/services/film.service.js' type='text/javascript')
+    script(src='assets/js/core/services/detail-film.service.js' type='text/javascript')
+    script(src='assets/js/core/services/favourite.service.js' type='text/javascript')
+    script(src='assets/js/core/services/http-interceptor.factory.js' type='text/javascript')
+    script(src='assets/js/core/services/mock-login.service.js' type='text/javascript')
+    script(src='assets/js/core/services/user.service.js' type='text/javascript')
+
+    script(src='assets/js/core/directives/back-button.directive.js' type='text/javascript')
+    script(src='assets/js/core/directives/autocomplete.directive.js' type='text/javascript')
+
+    //- script(src='assets/js/bundle.js' type='text/javascript')
+
+
+
+
+  body
+    div(ng-include="'header/header.template.html'")
+    div(ng-view)

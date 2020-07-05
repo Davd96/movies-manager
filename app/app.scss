@@ -1,0 +1,70 @@
+
+//Film list card
+
+#film-card {
+    width: 250px;
+    height: 450px;
+    margin: 20px;
+
+}
+
+.panel-size {
+    width: 100%;
+    height:50px ;
+}
+
+.icon-size {
+    font-size: 20px;
+}
+.icon-yellow {
+    color: yellow;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.image-normalize {
+    width: 250px;
+    height: 350px;
+}
+
+.empty-list-text {
+    font-size: 25px;
+    color: grey;
+}
+
+
+//Header
+
+.suggestion-dropdown {
+    position: absolute;
+    z-index: 1000;
+}
+
+
+//titlebar
+
+.full-width {
+    width: 100%;
+    height: 80px;
+}
+
+.back-icon {
+    font-size: 20pt;
+}
+
+.seccion-title {
+    font-size: 30pt;
+}
+
+
+//detailview
+
+.margin {
+    margin: 30px;
+}
+
+.icon-size-big {
+    font-size: 50px;
+}

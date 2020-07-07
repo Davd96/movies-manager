@@ -1,5 +1,5 @@
 # Movie Manager
-Simple application with angularjs, in charge of managing favorite movies using local storage.
+Simple application made with angularjs, in charge of managing favorite movies using local storage.
 
 ## Prerequisites
 
@@ -21,3 +21,7 @@ To start the service we execute the following command.
     npm start
 
 Which will serve the application in the following link http://localhost:3000
+
+## Credentials
+
+Logging is mocked, so any username and password will be valid.
